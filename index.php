@@ -27,11 +27,18 @@
     }    
     .bg-black {
         background-color: #000;
-   .carousel-caption {
+        
+    .carousel-caption {
       top:65%;
       transform:translateY(-50%);
       color: #7a8189;
     }
+    .btn {
+      font-size:18px;
+      color: #FFF;
+      padding:12px 22px;
+      background-color: #000;
+      border: 2px solid #FFF;
     </style>
   </head>
   <body>
