@@ -39,6 +39,17 @@
       padding:12px 22px;
       background-color: #000;
       border: 2px solid #FFF;
+    }
+    #Avatar {
+      border-radius: 50%;
+      max-width: 200px;
+      margin: 2% auto;
+    }
+    .container {
+     margin: 4% auto;
+     padding: 20px;
+      
+    }
     </style>
   </head>
   <body>
@@ -85,6 +96,24 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a> <!--Navigointi nappulat-->
+</div>
+</div>
+<!--seuraava kolmen jaon kappale-->
+<div class="container text-center">
+<h2> Only three east steps and you are done!</h2>
+<div class="row">
+<div class="col-sm-4">
+<img src="Pictures/register.png" id="Avatar">
+<h4>1. Register as an user and make renting even easier.</h4>
+</div>
+<div class="col-sm-4">
+<img src="Pictures/measurements.jpg" id="Avatar">
+<h4>2. Select the right tuxedo for you.</h4>
+</div>
+<div class="col-sm-4">
+<img src="Pictures/boss.jpg" id="Avatar">
+<h4>3. Pay and go out to be the boss.</h4>
+</div>
 </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
