@@ -27,6 +27,10 @@
     }    
     .bg-black {
         background-color: #000;
+   .carousel-caption {
+      top:65%;
+      transform:translateY(-50%);
+      color: #7a8189;
     }
     </style>
   </head>
