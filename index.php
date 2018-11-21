@@ -54,6 +54,10 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
       <img class="d-block w-100" src="Pictures/shirt.jpg" alt="First slide">
+      <div class="carousel-caption">
+      <h1>Are you ready to find the suit just for you?</h1>
+          <button type="button" class="btn btn-dark btn-lg"> Get started!</button>
+        </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="Pictures/collar.jpg" alt="Second slide">
