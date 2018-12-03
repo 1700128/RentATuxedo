@@ -83,7 +83,9 @@
       <img class="d-block w-100" src="Pictures/shirt.jpg" alt="First slide">
       <div class="carousel-caption">
       <h1>Are you ready to find the suit just for you?</h1>
+      <a href="create.php">
           <button type="button" class="btn btn-dark btn-lg"> Get started!</button>
+          </a>
         </div>
     </div>
     <div class="carousel-item">
