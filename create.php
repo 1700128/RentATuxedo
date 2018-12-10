@@ -1,7 +1,33 @@
 <!DOCTYPE html>
-<<!DOCTYPE html>
 <html>
 <head>
+    <!--Connection to database smokki, list of variables and sql query to send them into database smokki-->
+<?php
+   include ('connection.php');
+   
+   $fname = $_POST['fname'];
+   $lname = $_POST['lname'] ;
+   $address = $_POST['address'] ;
+   $city = $_POST['city'] ;
+   $zipcode = $_POST['zipcode'];
+   $email = $_POST['email'];
+   $password = $_POST['password'];
+   
+   if (!$_POST ['submit']) {
+       echo "All fields are required";
+       }
+   else{
+       $sql = "INSERT into smokki (First Name, Last Name, Address, City, Postal Code, Email, Password)
+       values('$fname','$lname','$address','$city','$zipcode','$email','$password' ";
+       
+       if (mysqli_query($conn, $sql)){
+           echo "Data creation succesfull, now you can Login";
+   }   
+       else{
+       echo "Something went wrong! Please try again.";}
+   
+
+  ?>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Registration Form</title>
@@ -13,15 +39,17 @@
 
 <h2> Your email address will be your Username for login in </h2>
     <form action="create.php" method="POST"> <!--specifying how to send data and use post-method for security reasons-->
-        Name: <input type="text" name="fname">
-        Last Name: <input type="text" name="lname">
-        Address: <input type="text" name="address">
-        City: <input type="text" name="city">
-        Postal Code: <input type="number" name="zipcode">
-        Email: <input type="email" name="email">
-        Password: <input type="password" name="password">
+        Name: <input type="text" name="fname" required>
+        Last Name: <input type="text" name="lname" required>
+        Address: <input type="text" name="address" required>
+        City: <input type="text" name="city" required>
+        Postal Code: <input type="number" name="zipcode" required>
+        Email: <input type="email" name="email" required>
+        Password: <input type="password" name="password" required>
         <input type="submit" name="submit" value="Registrate">
 
     </form>
+<body>
+    
 </body>
 </html>
