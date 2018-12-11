@@ -2,7 +2,7 @@
 #variables
 $dbhost = "localhost";
 $dbuser = "root";
-$dbpass = "Puderman7";
+$dbpass = "12345678";
 $db = "smokki";
 
 #connection to the database

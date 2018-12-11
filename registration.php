@@ -4,6 +4,7 @@
 <!--Connection to database smokki, list of variables and sql query to send them into database smokki-->
   <?php
    include ('connection.php');
+   error_reporting(0);
    $userName = $_POST['fname'];
    $userLname = $_POST['lname'];
    $userAddress = $_POST['address'];
