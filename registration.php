@@ -4,6 +4,29 @@
 <!--Connection to database smokki, list of variables and sql query to send them into database smokki-->
   <?php
    include ('connection.php');
+   $userName = $_POST['fname'];
+   $userLname = $_POST['lname'];
+   $userAddress = $_POST['address'];
+   $userCity = $_POST['city'];
+   $userPostalCode = $_POST['zipcode'];
+   $userEmail = $_POST['email'];
+   $userPassword = $_POST['password'];
+   
+   if (!$_POST ['submit']) {
+       echo "Please fill all the required fields";
+        }
+        else{
+            $sql = "INSERT into smokki (First Name, Last Name, Address, City, Postal Code, Email, Password)
+            values ('$userLname','$userLname','$userAddress','$userCity', '$userPostalCode', '$userEmail' , '$userPassword') ";
+            
+            if (mysqli_query($conn, $sql)){
+                echo "Registration was succesful, now you can Login";
+            }
+            
+            else{
+                echo "Something went wrong, please try again";
+            }
+        }
   ?>
 <head>  
   <meta charset="utf-8" />
