@@ -1,8 +1,8 @@
 <?php
 #variables
 $dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "Puderman7";
+$dbuser = "";
+$dbpass = "";
 $db = "smokki";
 
 #connection to the database
