@@ -68,7 +68,7 @@
       <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="#">Rental</a>
       <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link" href="#">Contact</a>
+      <a class="nav-item nav-link" href="contact.php">Contact</a>
     </div> <!--Navbar ja sivut, linkit vielä puuttuu muille sivuille-->
   </div>
 </nav>
