@@ -17,7 +17,7 @@
        echo "Please fill all the required fields";
         }
         else{
-            $sql = "INSERT into smokki (First Name, Last Name, Address, City, Postal Code, Email, Password)
+            $sql = "INSERT into persons (First Name, Last Name, Address, City, Postal Code, Email, Password)
             values ('$userLname','$userLname','$userAddress','$userCity', '$userPostalCode', '$userEmail' , '$userPassword') ";
             
             if (mysqli_query($conn, $sql)){
