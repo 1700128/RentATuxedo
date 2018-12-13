@@ -23,8 +23,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 		die("Please enter text");
 	}	
 	
-	//print output text
-	print "Hello " . $u_name . "!, we have received your message and email ". $u_email;
-	print "We will contact you very soon!";
+	$mysqli = new mysqli($mysql_host, $mysql_username, $mysql_password, $mysql_database);
+	
+	//Output any connection error
+	if ($mysqli->connect_error) {
+		die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
+	}	
+	
+	$statement = $mysqli->prepare("INSERT INTO users_data (user_name, user_email, user_message) VALUES(?, ?, ?)"); //prepare sql insert query
+	$statement->bind_param('sss', $u_name, $u_email, $u_text); //bind values and execute insert query
+	
+	if($statement->execute()){
+	echo "Hello " . $u_name . "!, your message has been saved!";
+	}else{
+		echo $mysqli->error; //show mysql error if any
+	}
 }
 ?>
