@@ -1,55 +1,130 @@
-<!DOCTYPE html>
-<html>
-
-<!--Connection to database smokki, list of variables and sql query to send them into database smokki-->
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  <!--Connection to database smokki-->
   <?php
-   include ('connection.php');
-   error_reporting(0);
-   $userName = $_POST['fname'];
-   $userLname = $_POST['lname'];
-   $userAddress = $_POST['address'];
-   $userCity = $_POST['city'];
-   $userPostalCode = $_POST['zipcode'];
-   $userEmail = $_POST['email'];
-   $userPassword = $_POST['password'];
-   
-   if (!$_POST ['submit']) {
-       echo "Please fill all the required fields";
-        }
-        else{
-            $sql = "INSERT into persons (First Name, Last Name, Address, City, Postal Code, Email, Password)
-            values ('$userLname','$userLname','$userAddress','$userCity', '$userPostalCode', '$userEmail' , '$userPassword') ";
-            
-            if (mysqli_query($conn, $sql)){
-                echo "Registration was succesful, now you can Login";
-            }
-            
-            else{
-                echo "Something went wrong, please try again";
-            }
-        }
-  ?>
-<head>  
-  <meta charset="utf-8" />
+//
+if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
+
+	//mysql credentials
+	$mysql_host = "127.0.0.1:50473";
+	$mysql_username = "azure";
+	$mysql_password = "6#vWHD_$";
+	$mysql_database = "smokki";
+
+	$u_fname = filter_var($_POST["user_fname"], FILTER_SANITIZE_STRING); //filter_var usage for cleaner inputs and also to check if values are empty.
+	$u_lname = filter_var($_POST["user_lname"], FILTER_SANITIZE_STRING);
+	$u_address = filter_var($_POST["user_address"], FILTER_SANITIZE_STRING);
+	$u_city = filter_var($_POST["user_city"], FILTER_SANITIZE_STRING);
+	$u_postalcode = filter_var($_POST["user_postalcode"], FILTER_SANITIZE_STRING);
+	$u_email = filter_var($_POST["user_email"], FILTER_SANITIZE_EMAIL);
+	$u_password = filter_var($_POST["user_password"], FILTER_SANITIZE_STRING);
+
+	if (empty($u_fname)){
+		die("Please enter your First name");
+	}
+	if (empty($u_lname)){
+		die("Please enter your Last name");
+	}
+	if (empty($u_address)){
+		die("Please enter your Address");
+	}
+	if (empty($u_city)){
+		die("Please enter your City");
+	}
+	if (empty($u_postalcode)){
+		die("Please enter your Postal Code");
+	}
+	if (empty($u_email) || !filter_var($u_email, FILTER_VALIDATE_EMAIL)){
+		die("Please enter valid email address");
+	}
+		
+	if (empty($u_password)){
+		die("Please enter password");
+	}	
+	
+	$mysqli = new mysqli($mysql_host, $mysql_username, $mysql_password, $mysql_database);
+	
+	//Output any connection error
+	if ($mysqli->connect_error) {
+		die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
+	}	
+	
+	$statement = $mysqli->prepare("INSERT INTO persons (user_fname, user_lname, user_address, user_city, user_postalcode, user_email, password) VALUES(?, ?, ?, ?, ?, ?, ?)"); //prepare sql insert query
+	$statement->bind_param('sss', $u_fname, $u_lname, $u_address, $u_city, $u_postalcode, $u_email, $u_password); //bind values and execute insert query
+	
+	if($statement->execute()){
+	echo "Hello " . $u_lname . "!, your registration has been succesful!";
+	}else{
+		echo $mysqli->error; //show mysql error if any
+	}
+}
+
+?>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Registration Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<h2> Your email address will be your Username for Login in </h2>
-    <form action="registration.php" method="POST"> <!--specifying how to send data and use post-method for security reasons-->
-        First Name: <input type="text" name="fname" required>
-        Last Name: <input type="text" name="lname" required>
-        Address: <input type="text" name="address" required>
-        City: <input type="text" name="city" required>
-        Postal Code: <input type="number" name="zipcode" required>
-        Email: <input type="email" name="email" required>
-        Password: <input type="password" name="password" required>
-        <input type="submit" name="submit" value="Registrate" required>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    </form>
-</body>
+    
+    <title>Contact</title>
+    <style>
+        .navbar {
+        margin-bottom: 0;
+        border-radius: 0;
+        background-color: #000;
+        color: #FFF;
+        padding: 1% 0;
+        font-size: 1.2em;
+    }
+    .navbar-brand {
+        float:left;
+        min-height: 55px;
+        padding: 0 15px 5px;
+    }    
+    .bg-black {
+        background-color: #000;
+    }
+    
+  
+   
+    </style>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <a class="navbar-brand" href="index.php"><img src="Pictures/logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="#">Rental</a>
+      <a class="nav-item nav-link" href="#">Pricing</a>
+      <a class="nav-item nav-link" href="contact.php">Contact</a>
+    </div> <!--Navbar ja sivut, linkit vielä puuttuu muille sivuille-->
+  </div>
+</nav>
+ 	<div class="container text-center">
+ 	
+ 	<h2>User Registration </h2>
+ 	<form method="post" action="registration.php">
+		First Name : <input type="text" name="user_fname" placeholder="Enter Your First Name" /><br />
+		Last Name : <input type="text" name="user_lname" placeholder="Enter Your Last Name" /><br />
+		Address : <input type="text" name="user_address" placeholder="Enter Your Address" /><br />
+		City : <input type="text" name="user_city" placeholder="Enter Your City" /><br />
+		Postal Code : <input type="number" name="user_postalcode" placeholder="Enter Your Postal Code" /><br />
+		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
+		Password : <input type="password" name="user_password" /><br />
+		<input type="submit" value="Submit" />
+		</form>
+ 	</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
 </html>
