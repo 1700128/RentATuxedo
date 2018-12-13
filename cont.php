@@ -3,7 +3,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 
     //mysql credentials
-	$mysql_host = "localhost";
+	$mysql_host = "127.0.0.1";
 	$mysql_username = "root";
 	$mysql_password = "";
 	$mysql_database = "smokki";
