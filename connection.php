@@ -3,7 +3,7 @@
 $dbhost = "127.0.0.1:50473";
 $dbusername = "azure";
 $dbpassword = "6#vWHD_$";
-$dbname = "localdb";
+$dbname = "smokki";
 
 #connection to the database
 $conn = new mysqli ($dbhost,$dbusername,$dbpassword,$dbname);

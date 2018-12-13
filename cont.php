@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	$mysql_host = "127.0.0.1:50473";
 	$mysql_username = "azure";
 	$mysql_password = "6#vWHD_$";
-	$mysql_database = "localdb";
+	$mysql_database = "smokki";
 
 	$u_name = filter_var($_POST["user_name"], FILTER_SANITIZE_STRING); //filter_var usage for cleaner inputs and also to check if values are empty.
 	$u_email = filter_var($_POST["user_email"], FILTER_SANITIZE_EMAIL);
