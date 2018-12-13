@@ -3,7 +3,7 @@
   <head>
   <!--Connection to database smokki-->
   <?php
-   include ('connection.php');
+   
    include ('cont.php');
 
   ?>
