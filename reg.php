@@ -24,7 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 		die("Please enter your city");
 	}
 
-
 	if (empty($u_email) || !filter_var($u_email, FILTER_VALIDATE_EMAIL)){
 		die("Please enter valid email address");
 	}
