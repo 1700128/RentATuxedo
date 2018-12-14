@@ -89,14 +89,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
         background-color: #000;
     }
     .form-table {
-	background: #d9eeff;
+	background: #000;
 	width: 100%;
 	border-spacing: initial;
 	margin: 2px 0px;
 	word-break: break-word;
 	table-layout: auto;
 	line-height: 1.8em;
-	color: #333;
+	color: #FFF;
 	border-radius: 4px;
 	padding: 20px 40px;
 }
@@ -160,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
         </tr>
         <tr>
 		<td>Postal Code</td>
-        <td><input type="number" class="inputBox" name="user_postalcode" placeholder="Enter Your Postal Code"></td>
+        <td><input type="text" class="inputBox" name="user_postalcode" placeholder="Enter Your Postal Code"></td>
         </tr>
         <tr>
 		<td>Email</td>
