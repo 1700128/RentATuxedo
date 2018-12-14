@@ -86,7 +86,7 @@
  	<div class="container text-center">
  	
  	<h2>User Registration </h2> <br>
- 	<form class="form-horizontal" form method="post" action="registration.php">
+ 	<form class="form-horizontal" form method="post" action="">
      <table border="0" width="500" align="center" class="form-table">
      <tr>
 		<td>First Name</td>
