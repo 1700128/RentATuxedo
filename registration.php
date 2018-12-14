@@ -110,8 +110,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 </nav>
  	<div class="container text-center">
  	
- 	<h2>User Registration </h2>
- 	<form method="post" action="registration.php">
+ 	<h2>User Registration </h2> <br>
+ 	<form class="form-hotizontal" form method="post" action="registration.php">
+     <div class="form-group">
 		First Name : <input type="text" name="user_fname" placeholder="Enter Your First Name" /><br />
 		Last Name : <input type="text" name="user_lname" placeholder="Enter Your Last Name" /><br />
 		Address : <input type="text" name="user_address" placeholder="Enter Your Address" /><br />
@@ -121,6 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 		Password : <input type="password" name="user_password" /><br />
 		<input type="submit" value="Submit" />
 		</form>
+        </div>
  	</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
