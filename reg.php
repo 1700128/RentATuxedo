@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	}	
 	
 	$statement = $mysqli->prepare("INSERT INTO users_registered (user_name, user_address, user_city, user_email, user_password) VALUES(?, ?, ?, ?, ?)"); //prepare sql insert query
-	$statement->bind_param('sss', $u_name, $u_address, $u_city, $u_email, $u_password); //bind values and execute insert query
+	$statement->bind_param('sssss', $u_name, $u_address, $u_city, $u_email, $u_password); //bind values and execute insert query
 	
 	if($statement->execute()){
 	echo "Hello " . $u_name . "!, your message has been saved!";
