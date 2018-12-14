@@ -63,6 +63,24 @@
 	border-radius: 4px;
 	margin-left: 20px;
 }
+body{
+	width:610px;
+	font-family:calibri;
+}
+.error-message {
+	padding: 7px 10px;
+	background: #fff1f2;
+	border: #ffd5da 1px solid;
+	color: #d6001c;
+	border-radius: 4px;
+}
+.success-message {
+	padding: 7px 10px;
+	background: #cae0c4;
+	border: #c3d0b5 1px solid;
+	color: #027506;
+	border-radius: 4px;
+}
     
   
    
@@ -88,6 +106,12 @@
  	<h2>User Registration </h2> <br>
  	<form class="form-horizontal" form method="post" action="">
      <table border="0" width="500" align="center" class="form-table">
+     <?php if(!empty($success_message)) { ?>	
+<div class="success-message"><?php if(isset($success_message)) echo $success_message; ?></div>
+<?php } ?>
+<?php if(!empty($error_message)) { ?>	
+<div class="error-message"><?php if(isset($error_message)) echo $error_message; ?></div>
+<?php } ?>
      <tr>
 		<td>First Name</td>
          <td><input type="text"  class="inputBox" name="user_fname" placeholder="Enter Your First Name"></td>
