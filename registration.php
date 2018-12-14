@@ -104,7 +104,7 @@ body{
  	<div class="container text-center">
  	
  	<h2>User Registration </h2> <br>
- 	<form name="frmRegistration" method="post" action="">
+ 	<form name="frmRegistration" method="post" action="registration.php">
 <table border="0" width="500" align="center" class="demo-table">
 <?php if(!empty($success_message)) { ?>	
 <div class="success-message"><?php if(isset($success_message)) echo $success_message; ?></div>
