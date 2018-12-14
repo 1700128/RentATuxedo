@@ -109,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	border-radius: 4px;
 }
 .btnRegister {
-	padding: 10px 30px;
+	padding: 30px 30px;
 	background-color: #3367b2;
 	border: 0;
 	color: #FFF;
