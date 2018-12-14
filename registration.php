@@ -3,7 +3,6 @@
   <head>
   <!--Connection to database smokki-->
   <?php
-//
 if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 
 	//mysql credentials
@@ -51,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	}	
 	
 	$statement = $mysqli->prepare("INSERT INTO registered_users (user_fname, user_lname, user_address, user_city, user_postalcode, user_email, user_password) VALUES(?, ?, ?, ?, ?, ?, ?)"); //prepare sql insert query
-	$statement->bind_param('sssssss', $u_fname, $u_lname, $u_address, $u_city, $u_postalcode, $u_email, $u_password); //bind values and execute insert query
+	$statement->bind_param('sss', $u_fname, $u_lname, $u_address, $u_city, $u_postalcode, $u_email, $u_password); //bind values and execute insert query
 	
 	if($statement->execute()){
 	echo "Hello " . $u_fname . "!, your registration has been succesful!";
@@ -70,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     
-    <title>Contact</title>
+    <title>Registration</title>
     <style>
         .navbar {
         margin-bottom: 0;
