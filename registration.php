@@ -3,8 +3,7 @@
   <head>
   <!--Connection to database smokki-->
   <?php
-  include('reg.php');
-
+  include ('reg.php');
 ?>
     <!-- Required meta tags -->
     <meta charset="utf-8">
