@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
  	<div class="container text-center">
  	
  	<h2>User Registration </h2> <br>
- 	<form class="form-hotizontal" form method="post" action="registration.php">
+ 	<form class="form-horizontal" form method="post" action="registration.php">
      <div class="form-group">
 		First Name : <input type="text" name="user_fname" placeholder="Enter Your First Name" /><br />
 		Last Name : <input type="text" name="user_lname" placeholder="Enter Your Last Name" /><br />
