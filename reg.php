@@ -6,11 +6,6 @@
 		$error_message = "All Fields are required";
 		break;
         }
-  if(!isset($error_message)) {
-      if (!filter_var($_POST["userEmail"], FILTER_VALIDATE_EMAIL)) {
-      $error_message = "Invalid Email Address";
-            }
-        }
   /* Validation to check if Terms and Conditions are accepted */
   if(!isset($error_message)) {
 	  if(!isset($_POST["terms"])) {
