@@ -4,6 +4,7 @@
   <!--Connection to database smokki-->
   <?php
   include ('reg.php');
+  include ('dbcontroller');
 ?>
     <!-- Required meta tags -->
     <meta charset="utf-8">
