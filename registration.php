@@ -56,12 +56,20 @@
 </nav>
  	<div class="container text-center">
  	
- 	<h1>User Registration. </h1>
- 	<form method="post" action="registration.php">
+ 	<h1>User Registration. </h1> <br>
+ 	<fform class="form-horizontal" form method="post" action="registration.php">
+     <div class= "form-group">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
+        </div>
+     <div class= "form-group">
         Address : <input type="text" name="user_address" placeholder="Enter Your Address" /><br />
+        </div>
+     <div class= "form-group">
 		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
+        </div>
+     <div class= "form-group">
 		Password : <input name="user_password" /><br />
+        </div>
 		<input type="submit" value="Register" />
 		</form>
  	</div>

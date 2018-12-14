@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	$statement->bind_param('ssss', $u_name, $u_address, $u_email, $u_password); //bind values and execute insert query
 	
 	if($statement->execute()){
-	echo "Hello " . $u_name . "!, your message has been saved!";
+	echo "Hello " . $u_name . "!, your registration was succesful!";
 	}else{
 		echo $mysqli->error; //show mysql error if any
 	}
