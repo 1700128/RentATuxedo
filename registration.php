@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
     }
     .form-table {
 	background: #000;
-	width: 90%;
+	width: 100%;
 	border-spacing: initial;
 	margin: 2px 0px;
 	word-break: break-word;
@@ -98,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	line-height: 1.8em;
 	color: #FFF;
 	border-radius: 4px;
-	padding: 20px 40px;
+	padding: 20px 20px;
 }
 
 .inputBox {
