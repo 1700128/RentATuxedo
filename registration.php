@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
     .bg-black {
         background-color: #000;
     }
-    .form horizontal {
+    .demo-table {
 	background: #d9eeff;
 	width: 100%;
 	border-spacing: initial;
@@ -124,6 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
  	
  	<h2>User Registration </h2> <br>
  	<form class="form-horizontal" form method="post" action="registration.php">
+     <table border="0" width="500" align="center" class="demo-table">
      <div class="form-group">
 		First Name :
          <input type="text" name="user_fname" placeholder="Enter Your First Name" /><br />
@@ -155,6 +156,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
         <div class="form-group">
 		<input type="submit" value="Submit" />
         </div>
+        </table>
 		</form>
         </div>
  	</div>
