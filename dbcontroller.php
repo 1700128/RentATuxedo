@@ -1,10 +1,10 @@
 <?php
 class DBController {
-	 private $host = "127.0.0.1:50473";
-	 private $user = "azure";
-	 private $password = "6#vWHD_$";
-	 private $database = "smokki";
-	 private $conn;
+	 public $host = "127.0.0.1:50473";
+	 public $user = "azure";
+	 public $password = "6#vWHD_$";
+	 public $database = "smokki";
+	 public $conn;
 	
 	function __construct() {
 		$this->conn = $this->connectDB();
