@@ -104,48 +104,44 @@ body{
  	<div class="container text-center">
  	
  	<h2>User Registration </h2> <br>
- 	<form class="form-horizontal" form method="post" action="">
-     <table border="0" width="500" align="center" class="form-table">
-     <?php if(!empty($success_message)) { ?>	
+ 	<<form name="frmRegistration" method="post" action="">
+<table border="0" width="500" align="center" class="demo-table">
+<?php if(!empty($success_message)) { ?>	
 <div class="success-message"><?php if(isset($success_message)) echo $success_message; ?></div>
 <?php } ?>
 <?php if(!empty($error_message)) { ?>	
 <div class="error-message"><?php if(isset($error_message)) echo $error_message; ?></div>
 <?php } ?>
-     <tr>
-		<td>First Name</td>
-         <td><input type="text"  class="inputBox" name="user_fname" placeholder="Enter Your First Name"></td>
-        </tr>
-        <tr>
-		<td>Last Name</td>
-         <td><input type="text" class="inputBox" name="user_lname" placeholder="Enter Your Last Name" ></td>
-        </tr>
-        <tr>
-		<td>Address</td>
-        <td><input type="text"  class="inputBox" name="user_address" placeholder="Enter Your Address"></td>
-        </tr>
-        <tr>
-		<td>City</td>
-        <td><input type="text" class="inputBox" name="user_city" placeholder="Enter Your City"></td>
-        </tr>
-        <tr>
-		<td>Postal Code</td>
-        <td><input type="text" class="inputBox" name="user_postalcode" placeholder="Enter Your Postal Code"></td>
-        </tr>
-        <tr>
-		<td>Email</td>
-        <td><input type="email" class="inputBox" name="user_email" placeholder="Enter Your Email"></td>
-        </tr>
-        <tr>
-		<td>Password</td>
-        <td><input type="password" class="inputBox" name="user_password" placeholder="Enter Your Password"></td>
-        </tr>
-        <tr>
-		<td colspan=2>
-        <input type="checkbox" name="terms"> I accept Terms and Conditions       <input type="submit" name="register-user" value="Register" class="btRnegister"> </td>
-        </tr>
-        </table>
-		</form>
+<tr>
+<td>User Name</td>
+<td><input type="text" class="demoInputBox" name="userName" value="<?php if(isset($_POST['userName'])) echo $_POST['userName']; ?>"></td>
+</tr>
+<tr>
+<td>First Name</td>
+<td><input type="text" class="demoInputBox" name="firstName" value="<?php if(isset($_POST['firstName'])) echo $_POST['firstName']; ?>"></td>
+</tr>
+<tr>
+<td>Last Name</td>
+<td><input type="text" class="demoInputBox" name="lastName" value="<?php if(isset($_POST['lastName'])) echo $_POST['lastName']; ?>"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input type="password" class="demoInputBox" name="password" value=""></td>
+</tr>
+<tr>
+<td>Confirm Password</td>
+<td><input type="password" class="demoInputBox" name="confirm_password" value=""></td>
+</tr>
+<tr>
+<td>Email</td>
+<td><input type="text" class="demoInputBox" name="userEmail" value="<?php if(isset($_POST['userEmail'])) echo $_POST['userEmail']; ?>"></td>
+</tr>
+<tr>
+<td colspan=2>
+<input type="checkbox" name="terms"> I accept Terms and Conditions <input type="submit" name="register-user" value="Register" class="btnRegister"></td>
+</tr>
+</table>
+</form>
     
  	</div>
 
