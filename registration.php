@@ -88,9 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
     .bg-black {
         background-color: #000;
     }
-    .form horizontal input{
-  float:left;
-}
 
     
   
