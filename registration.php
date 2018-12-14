@@ -100,9 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	border-radius: 4px;
 	padding: 20px 40px;
 }
-.form-table td {
-	padding: 15px 0px;
-}
+
 .inputBox {
 	padding: 10px 30px;
 	border: #a9a9a9 1px solid;
