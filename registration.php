@@ -125,37 +125,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
  	<h2>User Registration </h2> <br>
  	<form class="form-horizontal" form method="post" action="registration.php">
      <table border="0" width="500" align="center" class="demo-table">
-     <div class="form-group">
-		First Name :
-         <input type="text" name="user_fname" placeholder="Enter Your First Name" /><br />
-        </div>
-        <div class="form-group">
-		Last Name :
-         <input type="text" name="user_lname" placeholder="Enter Your Last Name" /><br />
-        </div>
-        <div class="form-group">
-		Address :
-        <input type="text" name="user_address" placeholder="Enter Your Address" /><br />
-        </div>
-        <div class="form-group">
-		City :
-        <input type="text" name="user_city" placeholder="Enter Your City" /><br />
-        </div>
-        <div class="form-group">
-		Postal Code :
-        <input type="number" name="user_postalcode" placeholder="Enter Your Postal Code" /><br />
-        </div>
-        <div class="form-group">
-		Email :
-        <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
-        </div>
-        <div class="form-group">
-		Password :
-        <input type="password" name="user_password" placeholder="Enter Your Password"/><br />
-        </div>
-        <div class="form-group">
-		<input type="submit" value="Submit" />
-        </div>
+     <tr>
+		<td>First Name</td>
+         <td><input type="text"  class="inputBox" name="user_fname" placeholder="Enter Your First Name"></td>
+        </tr>
+        <tr>
+		<td>Last Name</td>
+         <td><input type="text" class="inputBox" name="user_lname" placeholder="Enter Your Last Name" ></td>
+        </tr>
+        <tr>
+		<td>Address</td>
+        <td><input type="text"  class="inputBox" name="user_address" placeholder="Enter Your Address"></td>
+        </tr>
+        <tr>
+		<td>City</td>
+        <td><input type="text" class="inputBox" name="user_city" placeholder="Enter Your City"></td>
+        </tr>
+        <tr>
+		<td>Postal Code</td>
+        <td><input type="number" class="inputBox" name="user_postalcode" placeholder="Enter Your Postal Code"></td>
+        </tr>
+        <tr>
+		<td>Email</td>
+        <td><input type="email" class="inputBox" name="user_email" placeholder="Enter Your Email"></td>
+        </tr>
+        <tr>
+		<td>Password</td>
+        <td><input type="password" class="inputBox" name="user_password" placeholder="Enter Your Password"></td>
+        </tr>
+        <tr>
+		<td><input type="submit" value="Submit" class="btRnegister"> </td>
+        </tr>
         </table>
 		</form>
         </div>
