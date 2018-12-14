@@ -56,7 +56,7 @@
 </nav>
  	<div class="container text-center">
  	
- 	<h1>User Registrtion. </h1>
+ 	<h1>User Registration. </h1>
  	<form method="post" action="registration.php">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
         Address : <input type="text" name="user_address" placeholder="Enter Your Address" /><br />
