@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
     .bg-black {
         background-color: #000;
     }
-    .demo-table {
+    .form-table {
 	background: #d9eeff;
 	width: 100%;
 	border-spacing: initial;
@@ -99,6 +99,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	color: #333;
 	border-radius: 4px;
 	padding: 20px 40px;
+}
+.form-table td {
+	padding: 15px 0px;
+}
+.inputBox {
+	padding: 10px 30px;
+	border: #a9a9a9 1px solid;
+	border-radius: 4px;
+}
+.btnRegister {
+	padding: 10px 30px;
+	background-color: #3367b2;
+	border: 0;
+	color: #FFF;
+	cursor: pointer;
+	border-radius: 4px;
+	margin-left: 10px;
 }
     
   
@@ -124,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
  	
  	<h2>User Registration </h2> <br>
  	<form class="form-horizontal" form method="post" action="registration.php">
-     <table border="0" width="500" align="center" class="demo-table">
+     <table border="0" width="500" align="center" class="form-table">
      <tr>
 		<td>First Name</td>
          <td><input type="text"  class="inputBox" name="user_fname" placeholder="Enter Your First Name"></td>
