@@ -171,11 +171,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
         <td><input type="password" class="inputBox" name="user_password" placeholder="Enter Your Password"></td>
         </tr>
         <tr>
-		<td><input type="submit" value="Submit" class="btRnegister"> </td>
+		<td colspan=2>
+        <input type="checkbox" name="terms">I accept Terms and Conditions<input type="submit" name="register-user" value="Register" class="btRnegister"> </td>
         </tr>
         </table>
 		</form>
-        </div>
+    
  	</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
