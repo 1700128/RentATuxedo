@@ -90,7 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
     }
     .form-table {
 	background: #000;
-	width: 70%;
+	width: 90%;
 	border-spacing: initial;
 	margin: 2px 0px;
 	word-break: break-word;
@@ -105,6 +105,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	padding: 10px 30px;
 	border: #a9a9a9 1px solid;
 	border-radius: 4px;
+}
+.form-table td {
+	padding: 15px 0px;
 }
 .btnRegister {
 	padding: 30px 30px;
