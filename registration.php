@@ -173,7 +173,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
         </tr>
         <tr>
 		<td colspan=2>
-        <input type="checkbox" name="terms"> I accept Terms and Conditions  <input type="submit" name="register-user" value="Register" class="btRnegister"> </td>
+        <input type="checkbox" name="terms"> I accept Terms and Conditions       <input type="submit" name="register-user" value="Register" class="btRnegister"> </td>
         </tr>
         </table>
 		</form>
