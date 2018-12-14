@@ -118,12 +118,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
         <div class="form-group">
 		Last Name : <input type="text" name="user_lname" placeholder="Enter Your Last Name" /><br />
         </div>
+        <div class="form-group">
 		Address : <input type="text" name="user_address" placeholder="Enter Your Address" /><br />
+        </div>
+        <div class="form-group">
 		City : <input type="text" name="user_city" placeholder="Enter Your City" /><br />
+        </div>
+        <div class="form-group">
 		Postal Code : <input type="number" name="user_postalcode" placeholder="Enter Your Postal Code" /><br />
+        </div>
+        <div class="form-group">
 		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
+        </div>
+        <div class="form-group">
 		Password : <input type="password" name="user_password" /><br />
+        </div>
+        <div class="form-group">
 		<input type="submit" value="Submit" />
+        </div>
 		</form>
         </div>
  	</div>
