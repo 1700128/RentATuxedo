@@ -60,7 +60,6 @@
  	<form method="post" action="registration.php">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
         Address : <input type="text" name="user_address" placeholder="Enter Your Address" /><br />
-        City : <input type="text" name="user_citye" placeholder="Enter Your City" /><br />
 		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
 		Password : <input name="user_password" /><br />
 		<input type="submit" value="Register" />
