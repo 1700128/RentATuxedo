@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
     .bg-black {
         background-color: #000;
     }
-    .form group input{
+    .form horizontal input{
   float:center;
 }
 
@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
         </div>
         <div class="form-group">
 		Password : <br>
-        <input type="password" name="user_password" /><br />
+        <input type="password" name="user_password" placeholder="Enter Your Password"/><br />
         </div>
         <div class="form-group">
 		<input type="submit" value="Submit" />
