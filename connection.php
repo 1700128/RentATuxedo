@@ -6,11 +6,7 @@ $dbpassword = "6#vWHD_$";
 $dbname = "smokki";
 
 #connection to the database
-$conn = new mysqli ($dbhost,$dbusername,$dbpassword,$dbname);
-
-# check connection and announce if it doesn´t work
-if($conn->connect_error) {
-    echo "Connection failed";
-}
+$conn = mysqli_connect($dbhost,$dbusername,$dbpassword) or die("Unable to connect");
+mysqli_select_db($conn,$dbname);
 
 ?>
