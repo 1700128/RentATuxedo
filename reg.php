@@ -13,13 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	$u_cpassword = filter_var($_POST["cpassword"], FILTER_SANITIZE_STRING);
 
 	if (empty($u_name)){
-		die("Please enter your name");
-	}
-	if (empty($u_address)){
-		die("Please enter your address");
-	}
-	if (empty($u_email) || !filter_var($u_email, FILTER_VALIDATE_EMAIL)){
-		die("Please enter valid email address");
+		die("Please enter your Username");
 	}
 		
 	if ($password==$cpassword){
