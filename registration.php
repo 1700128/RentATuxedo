@@ -1,5 +1,6 @@
 <?php
-require 'connection.php';
+include ('connection.php');
+include ('reg.php');
 
 
 ?>
@@ -130,38 +131,7 @@ require 'connection.php';
 <input type="button" id="back_btn" value="<< Back to Login"/>
 </form>	
 
-<!--submit-button functionality,variables,passwords matching-->
-<?php
-    if(isset($_POST['submit_btn'])) {
-        
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $cpassword = $_POST['cpassword'];
 
-        if($password==$cpassword){
-            $query= "select * from user WHERE username='$username'";
-            $query_run = mysqli_query($conn,$query);
-
-            if(mysqli_num_rows($query_run)>0){
-                //username is already taken
-                echo '<script type="text/javascript"> alert("User already exist! Try another username".)</script>';
-            }
-            {
-                $query = "insert into user values('$username','$password')";
-                $query_run = mysqli_query($conn,$query);
-
-                if($query_run){
-                    echo '<script type="text/javascript"> alert("User succesfully registered! Go to Login Page".)</script>';
-
-                }
-                else{
-                    echo '<script type="text/javascript"> alert("Error!".)</script>';
-
-                }
-            }
-        }
-    }
-?>
 
 </div>
  	

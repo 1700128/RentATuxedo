@@ -6,7 +6,11 @@ $dbpassword = "6#vWHD_$";
 $dbname = "smokki";
 
 #connection to the database
-$conn = mysqli_connect("127.0.0.1:50473","azure","6#vWHD_$") or die("Unable to connect");
-mysqli_select_db($conn,'smokki');
+$conn = new mysqli ($dbhost,$dbusername,$dbpassword,$dbname);
+
+# check connection and announce if it doesn´t work
+if($conn->connect_error) {
+    echo "Connection failed";
+}
 
 ?>
