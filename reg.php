@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 		die("Please enter your Username");
 	}
 		
-	if ($password==$cpassword){
+	if ($password != $cpassword){
 		die("Passwords were incorrect");
 	}	
 	
