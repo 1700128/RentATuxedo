@@ -119,7 +119,7 @@ include ('connection.php');
 <center><h2>Registration Form</h2>
 <img src="Pictures/avatar.png" class="avatar"/>
 	</center>
-<form class="myform" action="registation.php" method="post">
+<form class="myform" action="registration.php" method="post">
 <label><b> Username:</b></label><br>
 <input name="username" type="text" class="inputvalues" placeholder="Username" required/><br>
 <label><b> Password:</b></label><br>
