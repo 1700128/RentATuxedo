@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	$statement->bind_param('ss', $u_name, $u_password); //bind values and execute insert query
 	
 	if($statement->execute()){
-	echo "Hello " . $u_name . "!, your registration was succesful!";
+	echo "Hello " . $u_name . "!, your registration was succesful! Please go Back to Login!";
 	}else{
 		echo $mysqli->error; //show mysql error if any
 	}

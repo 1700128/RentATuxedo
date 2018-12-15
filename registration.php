@@ -127,8 +127,8 @@ include ('reg.php');
 <input name="password" type="password" class="inputvalues" placeholder="Password" required/><br>
 <label><b>Confirm Password:</b></label><br>
 <input name="cpassword" type="password" class="inputvalues" placeholder=" Confirm password" required/><br>
-<input type="submit" id="signup_btn" value="Sign Up"/><br>
-<input type="button" id="back_btn" value="<< Back to Login"/>
+<a href="login.php"><input type="submit" id="signup_btn" value="Sign Up"/><br></a>
+<a href="login.php"><input type="button" id="back_btn" value="<< Back to Login"/></a>
 </form>	
 
 
