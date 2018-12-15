@@ -1,5 +1,4 @@
 <?php
-include ('connection.php');
 
 
 ?>
@@ -16,7 +15,7 @@ include ('connection.php');
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     
-    <title>Registration Page</title>
+    <title>Login Page</title>
     <style>
         .navbar {
         margin-bottom: 0;
@@ -71,9 +70,9 @@ include ('connection.php');
     	padding: 5px;
     	
     }
-    #signup_btn {
+    #login_btn {
     margin-top:10px;
-    background-color: #3498db;
+    background-color: #27ae60;
     padding:5px;
     color:white;
     width:100%;
@@ -81,13 +80,13 @@ include ('connection.php');
     text-align:center;
     
     }
-    #back_btn {
+    #register_btn {
     margin-bottom:20px;
     margin-top:10px;
-    background-color: red;
+    background-color: #3498db;
     padding:5px;
     color:white;
-    width:40%;
+    width:100%;
     font-size:18px;
     text-align:center;
     }
@@ -116,52 +115,17 @@ include ('connection.php');
 <div id="main-wrapper">
 
 
-<center><h2>Registration Form</h2>
+<center><h2>Login Form</h2>
 <img src="Pictures/avatar.png" class="avatar"/>
 	</center>
-<form class="myform" action="registation.php" method="post">
+<form class="myform" action="login.php" method="post">
 <label><b> Username:</b></label><br>
-<input name="username" type="text" class="inputvalues" placeholder="Username" required/><br>
+<input type="text" class="inputvalues" placeholder="Username"/><br>
 <label><b> Password:</b></label><br>
-<input name="password" type="password" class="inputvalues" placeholder="Password" required/><br>
-<label><b>Confirm Password:</b></label><br>
-<input name="cpassword" type="password" class="inputvalues" placeholder=" Confirm password" required/><br>
-<input type="submit" id="signup_btn" value="Sign Up"/><br>
-<input type="button" id="back_btn" value="<< Back to Login"/>
+<input type="password" class="inputvalues" placeholder="Password"/><br>
+<input type="submit" id="login_btn" value="Login"/><br>
+<input type="button" id="register_btn" value="Register"/>
 </form>	
-
-<!--submit-button functionality,variables,passwords matching-->
-<?php
-    if(isset($_POST['submit_btn'])) {
-        
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        $cpassword = $_POST['cpassword'];
-
-        if($password==$cpassword){
-            $query= "select * from user WHERE username='$username'";
-            $query_run = mysqli_query($conn,$query);
-
-            if(mysqli_num_rows($query_run)>0){
-                //username is already taken
-                echo '<script type="text/javascript"> alert("User already exist! Try another username".)</script>';
-            }
-            {
-                $query = "insert into user values('$username','$password')";
-                $query_run = mysqli_query($conn,$query);
-
-                if($query_run){
-                    echo '<script type="text/javascript"> alert("User succesfully registered! Go to Login Page".)</script>';
-
-                }
-                else{
-                    echo '<script type="text/javascript"> alert("Error!".)</script>';
-
-                }
-            }
-        }
-    }
-?>
 
 </div>
  	
