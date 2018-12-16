@@ -67,7 +67,7 @@
  	<?php echo $_SESSION['username']?>
  	 </h2>
       <div class="row">
-  <div class="col-sm-6">
+  <div class="col-sm-4">
   <img src="Pictures/suit.png" class="img-responsive"> 
   </div>
   <div class="col-sm-6">
