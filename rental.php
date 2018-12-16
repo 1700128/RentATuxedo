@@ -34,10 +34,13 @@
     .bg-black {
         background-color: #000;
     }
-    pull.right{
+    .pull.right{
     	float:right;
     }
-  
+    .form{
+        float:right;
+    }
+   
    
     </style>
   </head>
@@ -71,7 +74,7 @@
   <img src="Pictures/suit.png" class="img-responsive"> 
   </div>
   <div class="col-sm-6">
-  <form method="post" action="rental.php">
+  <form class="form" method="post" action="rental.php">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
 		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
 		Size : <input type="text" name="user_size" placeholder="Enter Your Size" /><br />
