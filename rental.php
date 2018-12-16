@@ -66,7 +66,7 @@
  	<?php echo $_SESSION['username']?>
  	 </h2>
       <div class="row">
-  <div class="col-md-6 col-xs-6">
+  <div class="col-sm-6">
   <img src="Pictures/suit.png" class="img-responsive"> </div>
   <div class="col-sm-6">
   <form method="post" action="contact.php">
