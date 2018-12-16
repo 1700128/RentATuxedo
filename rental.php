@@ -62,8 +62,8 @@
   </div>
 </nav>
  	<div class="container text-center">
- 	
- 	<h2>Welcome
+ 	<br>
+ 	<h2>Welcome to Our Rental service!
  	<?php echo $_SESSION['username']?>
  	 </h2>
       <div class="row">
@@ -75,6 +75,7 @@
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
 		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
 		Size : <input type="text" name="user_size" placeholder="Enter Your Size" /><br />
+        Rental Date : <input type="date" name="user_date" /><br />
 		<input type="submit" value="Rent" />
 		</form>
 		<?php
