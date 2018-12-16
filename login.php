@@ -1,4 +1,6 @@
 <?php
+session_start();
+include ('connection.php');
 
 
 ?>
@@ -120,12 +122,32 @@
 	</center>
 <form class="myform" action="login.php" method="post">
 <label><b> Username:</b></label><br>
-<input type="text" class="inputvalues" placeholder="Username"/><br>
+<input name="username" type="text" class="inputvalues" placeholder="Username" required/><br>
 <label><b> Password:</b></label><br>
-<input type="password" class="inputvalues" placeholder="Password"/><br>
-<input type="submit" id="login_btn" value="Login"/><br>
-<input type="button" id="register_btn" value="Register"/>
+<input name="password" type="password" class="inputvalues" placeholder="Password" required/><br>
+<input name="login" type="submit" id="login_btn" value="Login"/><br>
+<a href="registration.php"><input type="button" id="register_btn" value="Register"/></a>
 </form>	
+<?php
+if(isset($_POST['login']))
+{   
+    $username=$_POST['username'];
+    $password=$_POST['password'];
+    $query= "SELECT * from user WHERE username='$username' AND passwoord='$password'";
+
+    $query_run = mysqli_query($conn,$query);
+    if(myssqli_num_rows($query_run)>0) {
+        //valid
+        $_SESSION['username']=$username;
+        header('location:rental.php');
+    }
+    else{
+        //invalid
+        echo '<script type="text/javascript"> alert("Invalid credentials") </script>';
+    }
+}
+
+?>
 
 </div>
  	

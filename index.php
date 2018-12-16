@@ -66,7 +66,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Rental</a>
+      <a class="nav-item nav-link" href="rental.php">Rental</a>
       <a class="nav-item nav-link" href="#">Pricing</a>
       <a class="nav-item nav-link" href="contact.php">Contact</a>
     </div> <!--Navbar ja sivut, linkit vielä puuttuu muille sivuille-->
@@ -83,7 +83,7 @@
       <img class="d-block w-100" src="Pictures/shirt.jpg" alt="First slide">
       <div class="carousel-caption">
       <h1>Are you ready to find the suit just for you?</h1>
-          <a class="btn btn-dark btn-lg" href="registration.php"> Get started!
+          <a class="btn btn-dark btn-lg" href="login.php"> Get started!
           </a>
         </div>
     </div>
