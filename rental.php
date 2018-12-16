@@ -67,7 +67,9 @@
  	 </h2>
       <div class="row">
   <div class="col-sm-6">
-  <img src="Pictures/suit.png" class="img-responsive"> </div>
+  <img src="Pictures/suit.png" class="img-responsive"> 
+  <img src="Pictures/black.png" class="img-responsive">
+  </div>
   <div class="col-sm-6">
   <form method="post" action="contact.php">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
