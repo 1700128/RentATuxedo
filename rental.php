@@ -66,7 +66,8 @@
  	<?php echo $_SESSION['username']?>
  	 </h2>
       <div class="row">
-  <div class="col-sm-6"> </div>
+  <div class="col-md-6 col-xs-6">
+  <img src="Pictures/suit.png" class="img-responsive"> </div>
   <div class="col-sm-6">
   <form method="post" action="contact.php">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
@@ -83,18 +84,6 @@
   </div>
   
 </div> 
- 	<form method="post" action="contact.php">
-		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
-		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
-		Message : <textarea name="user_text"></textarea><br />
-		<input type="submit" value="Submit" />
-		</form>
-		<?php //logout php code
-        if(isset($_POST['logout'])) {
-            session_destroy();
-            header('location:index.php');}
-    
-		?>
  	</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
