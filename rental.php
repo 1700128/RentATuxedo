@@ -4,6 +4,7 @@
   <!--Connection to database smokki-->
   <?php
    include ('connection.php');
+   include ('rent.php');
 
   ?>
     <!-- Required meta tags -->
@@ -68,14 +69,13 @@
       <div class="row">
   <div class="col-sm-6">
   <img src="Pictures/suit.png" class="img-responsive"> 
-  <img src="Pictures/black.png" class="img-responsive">
   </div>
   <div class="col-sm-6">
-  <form method="post" action="contact.php">
+  <form method="post" action="rental.php">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
 		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
-		Message : <textarea name="user_text"></textarea><br />
-		<input type="submit" value="Submit" />
+		Size : <input type="text" name="user_size" placeholder="Enter Your Size" /><br />
+		<input type="submit" value="Rent" />
 		</form>
 		<?php
         if(isset($_POST['logout'])) {
