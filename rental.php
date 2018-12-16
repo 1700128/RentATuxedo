@@ -40,6 +40,9 @@
     .form{
         float:right;
     }
+    .img-responsive{
+        float:left;
+    }
    
    
     </style>
