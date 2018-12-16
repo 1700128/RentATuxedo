@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('connection.php');
+require_once('connection.php');
 
 
 ?>
@@ -133,12 +133,13 @@ if(isset($_POST['login']))
 {   
     $username=$_POST['username'];
     $password=$_POST['password'];
-    $query= "SELECT * from user WHERE username='$username' AND passwoord='$password'";
+    $query= "SELECT * from user WHERE username='$username' AND passwoord='$password' ";
 
     $query_run = mysqli_query($conn,$query);
-    if(myssqli_num_rows($query_run)>0) {
+    if(mysqli_num_rows($query_run)>0) {
         //valid
         $_SESSION['username']=$username;
+        $_SESSION['password']=$password;
         header('location:rental.php');
     }
     else{

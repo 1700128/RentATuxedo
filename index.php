@@ -69,7 +69,8 @@
       <a class="nav-item nav-link" href="rental.php">Rental</a>
       <a class="nav-item nav-link" href="#">Pricing</a>
       <a class="nav-item nav-link" href="contact.php">Contact</a>
-    </div> <!--Navbar ja sivut, linkit vielä puuttuu muille sivuille-->
+    </div> 
+    <!--Navbar ja sivut, linkit vielä puuttuu muille sivuille-->
   </div>
 </nav>
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
