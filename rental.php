@@ -70,9 +70,11 @@
  	<?php echo $_SESSION['username']?>
  	 </h2>
       <div class="row">
-  <div class="col-sm-4">
+  <div class="col-sm-6">
   <img src="Pictures/suit.png" class="img-responsive"> 
   </div>
+  </div>
+  <div class="row">
   <div class="col-sm-6">
   <form class="form" method="post" action="rental.php">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
