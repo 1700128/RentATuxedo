@@ -12,6 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 	$u_email = filter_var($_POST["user_email"], FILTER_SANITIZE_EMAIL);
 	$u_size = filter_var($_POST["user_size"], FILTER_SANITIZE_STRING);
     $u_date = filter_var($_POST["user_date"], FILTER_SANITIZE_DATE);
+    $u_edate = filter_var($_POST["end_date"], FILTER_SANITIZE_DATE);
 	if (empty($u_name)){
 		die("Please enter your name");
 	}
@@ -30,8 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {//Check it is comming from a form
 		die('Error : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 	}	
 	
-	$statement = $mysqli->prepare("INSERT INTO users_rent (user_name, user_email, user_size, user_date) VALUES(?, ?, ?, ?)"); //prepare sql insert query
-	$statement->bind_param('sss', $u_name, $u_email, $u_size, $u_date); //bind values and execute insert query
+	$statement = $mysqli->prepare("INSERT INTO users_rent (user_name, user_email, user_size, user_date, end_date) VALUES(?, ?, ?, ?)"); //prepare sql insert query
+	$statement->bind_param('sss', $u_name, $u_email, $u_size, $u_date, $u_edate); //bind values and execute insert query
 	
 	if($statement->execute()){
 	echo "Hello " . $u_name . "!, your rental is registered. An email will be sent to you for more details!";
