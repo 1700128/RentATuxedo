@@ -65,6 +65,24 @@
  	<h2>Welcome
  	<?php echo $_SESSION['username']?>
  	 </h2>
+      <div class="row">
+  <div class="col-sm-6">.col-sm-6
+  <form method="post" action="contact.php">
+		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
+		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
+		Message : <textarea name="user_text"></textarea><br />
+		<input type="submit" value="Submit" />
+		</form>
+		<?php
+        if(isset($_POST['logout'])) {
+            session_destroy();
+            header('location:index.php');}
+    
+		?>
+  </div>
+  <div class="col-sm-6">.col-sm-6</div>
+  
+</div> 
  	<form method="post" action="contact.php">
 		Name : <input type="text" name="user_name" placeholder="Enter Your Name" /><br />
 		Email : <input type="email" name="user_email" placeholder="Enter Your Email" /><br />
